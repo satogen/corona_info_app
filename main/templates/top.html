@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>日本｜コロナ感染者情報サイト</title>
+        <link rel="stylesheet" href="/static/css/top.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="icon" href="/static/images/site_icon.svg" type="image/svg+xml">
+        <meta name="description" content="本サイトは、コロナウイルス(別名2019-nCoVまたは武漢コロナウイルス)の情報を掲載しています。日本国内、海外での詳しいコロナウイルスの情報を知りたい方は、お立ち寄りください。毎日、コロナウイルスの情報を厚生労働省の情報を元に更新していきます" />
+        <meta property="og:url" content="https://secure-brook-78112.herokuapp.com/" />
+        <meta property="og:title" content="日本｜コロナ感染者情報サイト" />
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="/static/images/top.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@corona2020_info" />
+        <meta property="og:site_name" content="日本｜コロナ感染者情報サイト" />
+        <meta property="og:locale" content="ja_JP" />
+    </head>
+    <body>
+        <style>
+            path {
+                fill: #0bd;
+            }
+            @media (prefers-color-scheme: dark) {
+                path {
+                    fill: #faa;
+                }
+            }
+        </style>
+        <header>
+            <h1><i class="fas fa-biohazard"></i>Coronavirus information site</h1>
+            <h2>~コロナウイルスの情報掲載サイトです~</h2>
+        </header>
+        <main>
+            <div class='main-contents'>
+                <h2><i class="fas fa-biohazard"></i>コロナウイルス感染者数</h2>
+                <p><span class="count count_number"data-num={{ sum_korona }}>0 </span>人</p></p>  
+            </div>
+
+            <div class="sub-contents">
+                <h2><i class="fas fa-skull-crossbones"></i>コロナウイルスによる死亡者数</h2>
+                <p><span class="count count_number"data-num={{ sum_deth }}>0 </span>人</p>
+            </div>
+
+            <table>
+                <tr>
+                    <td>国名</td>
+                    <td>コロナウイルス感染者数</td>
+                </tr>
+                <tr>
+                    <td>
+                        日本
+                    </td>
+                    <td>
+                        {{ j_person_sum }}人
+                    </td>
+                
+                </tr>
+                {% for key in country_list.keys() %}
+                <tr>
+                    <td>
+                        {{ key  }}            
+                    </td>
+                    <td>
+                        {{ country_list[key] }}人
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </main>
+        <section>
+            <div class="attention">※これらのデータは、金曜日のものです。</div>
+        </section>
+        <blockquote><a src='https://www.mhlw.go.jp/stf/newpage_09690.html'>新型コロナウイルス感染症の現在の状況と厚生労働省の対応について（令和２年２月21日版）</a>を参考</blockquote>
+        <footer>
+            <p>COPYRIGHT &#169;日本｜コロナ感染者情報サイト(Coronavirus information site)  ALL RIGHTS RESERVED. </p>
+            </footer>
+        <script src="/static/js/main.js"></script>
+    </body>
+
+
+</html>
+

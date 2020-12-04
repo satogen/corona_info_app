@@ -1,0 +1,11 @@
+backports.os==0.1.1
+backports.weakref==1.0.post1
+Flask==1.1.1
+gunicorn==20.0.4
+pandas==0.25.1
+pandas-datareader==0.8.1
+pandas-profiling==2.3.0
+beautifulsoup4==4.8.0
+requests==2.22.0
+APScheduler==3.6.3
+jaconv==0.2.4

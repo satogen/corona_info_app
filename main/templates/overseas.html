@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta property="og:url" content="https://toyokeizai.net/sp/visual/tko/covid19/" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="新型コロナウイルス 国外感染の状況" />
+		<meta property="og:description" content="国外において現在確定している新型コロナウイルス（COVID-19）の感染状況を厚生労働省の報道発表資料からビジュアル化した" />
+		<meta property="og:image" content="https://toyokeizai.net/sp/visual/tko/covid19/img/image_1200_630.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.min.css"/>
+		<title>新型コロナウイルス 国外の感染の状況</title>
+    <script src="https://tk.ismcdn.jp/sp/js/td_sdk.js" type="text/javascript" async></script>
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5CJSV5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  </head>
+  <body>
+    <div id="container">
+      <div id="title-block">
+        <h2><span>新型コロナウイルス</span><span>国外の感染の状況</span></h2>
+        <p>国外において現在確定している新型コロナウイルス（COVID-19）の感染状況を厚生労働省の報道発表資料からビジュアル化した。</p>
+        <p>最終更新：{{ update_time }}</p>
+      </div>
+
+      <div id="main-block">
+        <div id='foregin-block'>
+          <h3>国外の情報</h3>
+          <div class="switches">
+            <div class="switch selected" value="total">中国あり</div>
+            <div class="switch" value="new">中国なし</div>
+          </div>
+          <div id="foreign-chart"></div>
+        </div>
+        <div>
+            <h3>海外の情報</h3>
+            <div id="corona_all_world"></div>
+        </div>
+      </div>
+      
+      <iframe width='100%' height="600px" src="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" frameborder="0"></iframe>
+
+
+      <div id="footer-block">
+        <p class="notes">注）日本国内の人数は除く</p>
+        <p class="notes">データソース：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000121431_00086.html" target="_blank">厚生労働省の報道発表資料</a>。チャート描画：<a href="https://www.chartjs.org/" target="_blank">Chart.js</a>。マップ描画：<a href="https://github.com/takemaru-hirai/japan-map" target="_blank">Japan Map</a>。</p>
+        <p class="notes">手法：上記データソースからスクレイピングし、グラフ化</p>
+
+        <div id="social-buttons">
+          <a class="twitter"  href="https://twitter.com/halogen0022" target="_blank"></a>
+        </div>
+	<p><small lang="en">© 2020 halogen</small></p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/static/js/jquery.japan-map.min.js"></script>
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
