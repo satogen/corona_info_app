@@ -11,7 +11,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import jaconv
 
 
-@app.route('/')
+@app.route('/')  # ホーム
 def corona():
     return flask.render_template('index.html', update_time=update_time)
 
